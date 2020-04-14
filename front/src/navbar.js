@@ -26,6 +26,7 @@ function Navbar(props) {
         </Link>
         <div className="navbar-nav ml-auto">
           <Link className="cartimg" to="/payment">
+            <!-- Juan Pablo Correa: sería bueno ponerle a esta imagen alguna animación. Puede ser que cuando se pase el cursor se rellenen de otro color -->
             <img alt="Go to pay" src={cart} width="30" height="30" />
           </Link>
           {!props.user.username ? (
@@ -51,6 +52,7 @@ function Navbar(props) {
           >
             <Link className="dropdown-item" to="/">
               <button onClick={onClickLogout}>
+                <!-- Juan Pablo Correa: sería bueno ponerle a esta imagen alguna animación. Puede ser que cuando se pase el cursor se rellenen de otro color -->
                 <img src={logout} alt="logout" width="20" height="20" />
               </button>
             </Link>
