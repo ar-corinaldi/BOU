@@ -20,9 +20,10 @@ function ListStore(props) {
                       <div className="col-lg-12">
                         <div className="p-5">
                           <div className="text-center">
-                            <h1 className="h4 text-gray-900 mb-4">
-                              ¿En qué tienda estás?
-                            </h1>
+                            <!-- Juan Pablo Correa: No me parece buena práctica tener un h1 pero estilizarlo como h4. Mejor replantearía el diseño de los h4 como tal -->
+                            <h4 className="text-gray-900 mb-4">
+                              ¿En cuál tienda estás?
+                            </h4>
                           </div>
 
                           <ul className="shop-list">
@@ -39,9 +40,11 @@ function ListStore(props) {
                           <div className="text-center">
                             
                               <h3 className="card-title">{shop.name} </h3>
+                              <!-- Juan Pablo Correa: Aquí llamaría muchisimo la atención poner una imagen del local, para que el home no se vea tan apagado. Pueden tener una carpeta donde el nombre de la imagen sea el mismo id para hacer esto dinámico -->
                            <div className="col-lg-12">
                                   <Link to={`/${shop._id}`}>
-                                    <button className="shop-go">Comprar</button>
+                                    <!-- Juan Pablo Correa: Habiendo implementado Bootstrap, me parece buena idea usar diseños de botones que ya existen pero sobreescribiendo sus colores por los deseados, o tener un color para el botón normal y otro para el hover como hace Bootstrap -->
+                                    <button className="btn shop-go">Comprar</button>
                                   </Link>
                                 </div>
                           </div>
