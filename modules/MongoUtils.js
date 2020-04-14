@@ -50,6 +50,7 @@ function MongoUtils() {
     });
   };
 
+
   mu.users.findById = (_id, cb) => {
     return mu.connect().then((client) => {
       const users = client.db(DB_NAME).collection("users");
@@ -86,6 +87,8 @@ function MongoUtils() {
     });
   };
 
+  // Juan Pablo Correa: Estoy seguro que en Mongo existe una query específica para evitar ese machetazo.
+  // No tengo pruebas pero tampoco dudas.
   mu.shops.findProductInShop = (shopId, productId) => {
     return mu.connect().then((client) => {
       const shops = client.db(DB_NAME).collection("shops");
