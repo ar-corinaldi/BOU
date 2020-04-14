@@ -25,6 +25,7 @@ function AddToCart(props) {
       if (product.id === newItem.id) {
         newItem = { id: " ", name: "Item ya agregado! Ve a pagar", price: "" };
 
+        
         break;
       }
     }
